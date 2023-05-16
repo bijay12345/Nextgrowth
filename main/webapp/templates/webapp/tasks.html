@@ -1,0 +1,30 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+<a class="back-btn" href="{%url 'applications'%}"><i class="fa-solid fa-angles-left"></i></a>
+<hr>
+<p class="header-heading">Completed Tasks</p>
+<div class="points">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">App Name</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {%for item in data%}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td><img class="table-image" src="{{item.image}}" /></td>
+                <td>{{item.app.app_name}}</td>
+                <td class="task-status"><i class="fa-solid fa-check-double"></i> completed</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <p class="totalSum">Total Points: {{points}}</p>
+</div>
+{%endblock content%}

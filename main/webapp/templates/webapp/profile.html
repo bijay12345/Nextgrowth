@@ -1,0 +1,22 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+<a class="back-btn" href="{%url 'applications'%}"><i class="fa-solid fa-angles-left"></i></a>
+<hr>
+<div class="profile-div">
+    <div class="profile-info">
+
+        <div>
+            <p>Your Name: {{profile.user.user_name}}</p>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <p>View All Tasks</p>
+                    <p><a href="{%url 'user-tasks'%}">View</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{%endblock content%}

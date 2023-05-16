@@ -1,0 +1,44 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+<a class="back-btn" href="{%url 'applications'%}"><i class="fa-solid fa-angles-left"></i></a>
+<hr>
+<div class="admin-panel">
+    <div>
+        <form action="{%url 'admin-panel'%}" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="admin-image-div">
+                <label for="image">
+                    <i class="fa-regular fa-image image-upload"></i>
+
+                </label>
+            </div>
+            <input type="file" id="image" name="app_image" hidden>
+            <div class="input-fields">
+                <input type="text" name="app_name" placeholder="App name">
+                <input type="text" name="app_link" placeholder="App link">
+
+                <select name="app_category" id="app-category">
+                    <option disabled selected value="">App category</option>
+                    {% for key,value in appcategory.items%}
+                    <option value="{{key}}">{{value}}</option>
+                    {%endfor%}
+                </select>
+
+                <select name="sub_category" id="sub-category">
+                    <option disabled selected value="">Sub Category</option>
+                    {% for key,value in subcategory.items%}
+                    <option value="{{key}}">{{value}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+            <div class="points-input">
+                <input type="text" name="points" placeholder="Points">
+            </div>
+
+            <div class="admin-btn-div">
+                <button type="submit" class="btn admin-submit-btn" id="submit-btn">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
+{%endblock content%}

@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+i {
+    font-size: 1.3rem;
+}
+
+.fa-check-double {
+    color: #3ae0a8;
+}
+
+.row {
+    width: 100%;
+}
+
+.user-title {
+    text-align: center;
+    padding: 4px;
+}
+
+.content-row {
+    background: #ebe8e8;
+}
+
+.row .sidebar-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.row .sidebar-section .sidebar-ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.row .sidebar-section .sidebar-ul .sidebar-link {
+    padding: 10px;
+    border: 1px solid rgb(161, 89, 228);
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.row .sidebar-section .sidebar-ul .sidebar-link:hover {
+    background: rgb(161, 89, 228);
+}
+
+.row .sidebar-section .sidebar-ul .sidebar-link a {
+    text-decoration: none;
+    color: rgb(161, 89, 228);
+    margin: auto;
+}
+
+.row .sidebar-section .sidebar-ul .sidebar-link a i {
+    margin: 0 5px;
+}
+
+.row .sidebar-section .sidebar-ul .sidebar-link a i:hover,
+.row .sidebar-section .sidebar-ul .sidebar-link a:hover {
+    color: white;
+}
+
+/* App List */
+
+#block-content-section {
+    padding: 20px;
+}
+
+.content {
+    background: white;
+    padding: 20px;
+}
+
+.content .single-content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #ebe8e8;
+    padding: 10px 20px;
+
+}
+
+.content .single-content .blog-details {
+    display: flex;
+    align-items: center;
+}
+
+.content .single-content .blog-details div {
+    margin: 0 20px;
+}
+
+.content .single-content img {
+    width: 12vw;
+    height: 100%;
+}
+
+.btn-home button {
+    padding: 7px 3rem;
+    background: #3ae0a8;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.btn-home button:hover {
+    background: #46eab3;
+}
+
+/* Detail Page */
+
+.detail-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    border: 5px solid white;
+}
+
+.detail-content img {
+    width: 15vw;
+}
+
+.detail-content .app-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail-content .app-detail div {
+    margin: 0 30px;
+}
+
+.detailpage form {
+    margin: 20px 0px;
+    padding: 3rem;
+}
+
+.image-input-div {
+    text-align: center;
+    background: transparent;
+    width: 15rem;
+    height: 15vh;
+    margin: 10vh auto;
+}
+
+.image-input-div input {
+    margin: 20px 0;
+}
+
+
+.submit-btn {
+    width: fit-content;
+    margin: auto;
+}
+
+.submit-btn button {
+    padding: 10px 30px;
+    background: #3ae0a8;
+}
+
+.submit-btn button:hover {
+    background: #46eab3;
+}
+
+
+
+/* Points view */
+
+.header-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #3ae0a8;
+}
+
+.points {
+    padding: 2rem;
+    background: white;
+}
+
+table img {
+    width: 70px;
+    height: 100%;
+}
+
+.totalSum {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: fit-content;
+    border: 1px solid;
+    padding: 3px;
+    border-radius: 4px;
+    background: #46eab3;
+}
+
+/* Profile */
+.profile-div {
+    padding: 3rem;
+    background: white;
+}
+
+/* Login - register */
+
+.login-register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.login-register-form label {
+    color: blueviolet;
+    font-weight: 700;
+}
+
+.login-register-form input {
+    width: 20rem;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 3px;
+    box-shadow: 1px 2px 0.4px blueviolet;
+    padding: 4px;
+    margin: 20px 0px;
+}
+
+.login-register-form button {
+    background-color: #3ae0a8;
+    padding: 5px 20px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid #46eab3;
+    border-radius: 4px;
+}
+
+.login-register-form button:hover {
+    background-color: #46eab3;
+}
+
+.login-register-form legend {
+    color: blueviolet;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Admin Panel */
+.admin-panel {
+    padding: 3rem;
+}
+
+.admin-panel .input-fields {
+    display: grid;
+    grid-column-gap: 1px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.admin-image-div {
+    margin-bottom: 60px;
+}
+
+.admin-image-div label {
+    width: 100%;
+    height: 100%;
+}
+
+
+.admin-image-div i {
+    font-size: 20vw;
+    color: gray;
+    width: 100%;
+    text-align: center;
+}
+
+.admin-panel .input-fields input,
+.admin-panel .input-fields select,
+.admin-panel .points-input input {
+    padding: 6px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.admin-panel .points-input {
+    margin: 30px 0px;
+}
+
+.admin-panel button {
+    background-color: #3ae0a8;
+    padding: 5px 20px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid #46eab3;
+    border-radius: 4px;
+}
+
+.admin-panel button:hover {
+    background: #3ae0a8;
+}

@@ -1,0 +1,13 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+<form action="{%url 'user-login'%}" method="post" class="login-register-form">
+    <legend>Login</legend>
+    {%csrf_token%}
+    <label for="email">Email:</label>
+    <input id="email" type="text" name="email" placeholder="Email" required>
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" placeholder="password" required>
+    <button type="submit">Login</button>
+</form>
+{%endblock content%}

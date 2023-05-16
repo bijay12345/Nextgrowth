@@ -1,0 +1,19 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+<div class="content">
+    {%for app in data%}
+    <div class="single-content">
+        <div class="blog-details">
+            <img src="{{app.app_image}}" class="app-img" alt="">
+            <div>
+                <p>{{app.app_name}}</p>
+                <a href="{%url 'detail' app.id%}">view in detail >></a>
+            </div>
+        </div>
+        <div class="btn-home">
+            <button class="btn">{{app.points}}</button>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+{%endblock content%}

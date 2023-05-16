@@ -1,0 +1,39 @@
+<div class="sidebar">
+    <ul class="sidebar-ul">
+        {%if request.user.is_staff%}
+        <li class="sidebar-link">
+            <a href="{%url 'applications'%}"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'admin-panel'%}"><i class="fa-solid fa-plus"></i>Add apps</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'user-logout'%}"><i class="fa-solid fa-power-off"></i> Logout</a>
+        </li>
+        {%elif request.user.is_authenticated%}
+        <li class="sidebar-link">
+            <a href="{%url 'applications'%}"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'profile' request.user.id%}"><i class="fa-solid fa-user"></i> Profile</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'points' request.user.id%}"><i class="fa-solid fa-table-cells"></i> Points</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'user-tasks'%}"><i class="fa-solid fa-clipboard"></i> Task</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'user-logout'%}"><i class="fa-solid fa-power-off"></i> Logout</a>
+        </li>
+
+        {%else%}
+        <li class="sidebar-link">
+            <a href="{%url 'user-login'%}"><i class="fa-solid fa-user"></i> Login</a>
+        </li>
+        <li class="sidebar-link">
+            <a href="{%url 'register-user'%}"><i class="fa-solid fa-user-plus"></i>Register</a>
+        </li>
+        {%endif%}
+    </ul>
+</div>

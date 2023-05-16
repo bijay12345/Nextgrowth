@@ -1,0 +1,20 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+{%if error%}
+<p>{{error}}</p>
+{%endif%}
+<form action="{%url 'register-user'%}" method="post" class="login-register-form">
+    <legend>Register</legend>
+    {%csrf_token%}
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="user_name" placeholder="username" required>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" placeholder="Email" required>
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" placeholder="password" required>
+
+    <button type="submit">Register</button>
+</form>
+{%endblock content%}

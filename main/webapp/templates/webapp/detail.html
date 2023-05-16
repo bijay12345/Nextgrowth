@@ -1,0 +1,38 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+<a class="back-btn" href="{%url 'applications'%}"><i class="fa-solid fa-angles-left"></i></a>
+<div class="detailpage">
+    <div class="detail-content">
+        <div class="app-detail">
+            <img src="{{data.app_image}}" class="app-img" alt="">
+            <div>
+                <p>{{data.app_name}}</p>
+                <a href="{{data.app_link}}">{{data.app_link}}</a>
+            </div>
+        </div>
+        <div class="btn-home">
+            <button class="btn">{{data.points}} POINTS</button>
+        </div>
+
+    </div>
+    <form action="{%url 'user-upload'%}" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div class="image-input-div">
+
+            <input id="upload-img" name="image" type="file">
+            <p>Upload screenshot to complete the task</p>
+        </div>
+        <input type="hidden" name="user" value="{{request.user.id}}" id="user">
+        <input type="hidden" name="app" value="{{data.id}}" id="app">
+        <div class="submit-btn">
+            <button class="btn">
+                Submit
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+
+{%endblock content%}

@@ -1,0 +1,28 @@
+{%extends "webapp/base.html"%}
+{%block content%}
+
+<p class="header-heading">Points</p>
+<div class="points">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">App Name</th>
+                <th scope="col">Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in data%}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td><img class="table-image" src="{{item.image}}" /></td>
+                <td>{{item.app.app_name}}</td>
+                <td>{{item.app.points}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <p class="totalSum">Earned: {{points}} Points</p>
+</div>
+{%endblock content%}
